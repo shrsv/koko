@@ -1,0 +1,47 @@
+$def with (form)
+<!doctype html>
+<meta charset="utf-8"> 
+
+<html>
+<head>
+    <title>Koko: extract possible tags for any text</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+
+    <a href="/" title="Koko is a gorilla. She even has a wikipedia page!"><h1>Koko*</h1></a>
+
+    <small>extract possible tags for any text</small>
+</div>
+
+<div id="content">
+
+    <form id="main" name="main" method="post">
+
+        $if not form.valid: <p class="error"> Try again, American:<p>
+        $:form.render()
+        <input type="submit" />
+
+    </form> 
+
+</div>
+
+<div id="result">
+
+<div id="loading">
+    <img src="../static/loading.gif" />
+</div>
+
+</div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../static/messenger.js"></script>
+
+</body>
+</html>
